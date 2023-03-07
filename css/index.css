@@ -1,0 +1,300 @@
+/* ---font-family-Rubik Gemstones */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap');
+/* font-family-Roboto'-sans-serif */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&family=Rubik+Gemstones&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--rob);
+    font-weight: bold;
+    
+}
+body{
+    height: 1000vh;
+}
+:root{
+    --org: orange;
+    --bl : darkblue;
+    --bsh : 5px 14px 15px 0px rgba(173,173,173,0.75);
+    --rob:Roboto, sans-serif;
+    --Ru:'Rubik Gemstones', cursive;
+
+}
+
+header{
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FDFEFD;
+    box-shadow: var(--bsh);
+    transition: 0.6s;
+    z-index: 178;
+
+}
+.logo i{
+    color:var(--org);
+    font-size: 35px;
+
+    
+}
+.logo {
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 30px;
+    color: var(--bl);
+    font-family: var(--Ru);
+    font-style: italic;
+
+}
+header nav ul{
+    list-style: none;
+
+}
+header nav ul li {
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+}
+header nav ul li::after{
+    content: "";
+    position: absolute;
+    left: -0px;
+    bottom: -5px;
+    background-color: var(--org);
+    width: 0%;
+    height: 0px;
+    transition: 0.5s linear 0s;
+}
+header nav ul li a{
+    text-decoration: none;
+    font-family: var(--rob);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.ico div{
+    font-size: 1.4rem;
+    color: #000000;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    margin: 0px 5px 0px 5px;
+    background-color: #EBEDEB;
+    border-radius: 5%;
+    cursor: pointer;
+    transition: 0.5s linear 0s;
+}
+/* hero-section */
+.hero{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/banner-bg.webp);
+    color: black;
+}
+.herosec{
+    margin-top: 50px;
+    position: absolute;
+    top: 45%;
+    left: 40%;
+    transform: translate(-40%,-40%);
+}
+.herosec h2,span{
+    margin-bottom:10px ;
+    font-size: 40px;
+    color: var(--bl);
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.herosec h2 span{
+    color: var(--org);
+}
+.herosec p{
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 0 60px 20px ;
+    font-weight: 100;
+    font-family: var(--rob);
+    word-wrap: break-word;
+}
+.herosec button{
+margin-left:38%;
+border:2px solid var(--bl);
+color: var(--bl);
+border-radius: 10px;
+font-weight: bold;
+background-color: transparent;
+padding: 20px;
+font-size: 1.4rem;
+font-family: var(--rob);
+transition: 0.2s linear 0s;
+cursor: pointer;
+transition: 0.5s linear 0s;
+}
+            /* hover */
+header nav ul li:hover::after{
+    width: 100%;
+    height: 3px;
+    border-radius: 0 25px  25px 0;
+}
+.herosec button:hover{
+    background-color: var(--org);
+
+}
+.ico div:hover{
+    background-color: var(--org);
+    color: white;
+}
+.search_id{
+
+    position: absolute;
+    top: 110%;
+    right: -100%;
+    overflow: hidden;
+    margin-top: 10px;
+    z-index: 1;
+    padding: 10px;
+    background-color:#eeee ;
+
+}
+.search_id.active{
+    right: 3rem;
+    transition: 0.2s linear;
+}
+.search_id input{
+    width:400px;
+    height: 30px;
+    position: relative;
+    padding: 10px;
+    color: var(--bl);
+    border-color:transparent;
+}
+.search_id label:hover{
+    color: var(--org);
+    cursor: pointer;
+}
+/* login-cart */
+.login{
+    position: absolute;
+    top: 110%;
+    overflow: hidden;
+    right: -100%;
+    width: 300px;
+    height: 320px;
+    background-color: #eee;
+    margin-top: 10px;
+    z-index: 234;
+    margin-left: 30px;
+    text-align: center;
+    box-shadow: var(--bsh);
+    transition: .2s linear ;
+    clear: both;
+
+    
+}
+.login.use{
+    right: 2rem;
+
+}
+.login:hover{
+    border: 2px solid var(--org);
+    cursor: pointer;
+}
+.login h1{
+    text-align: center;
+    margin: 5px auto 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.login input{
+    margin: 10px ;
+    height: 30px;
+    padding: 10px;
+    width: 60%;
+    border: 1px solid var(--bl);
+    outline: none;
+    border-radius: 5px;
+    float: right;
+}
+.login label{
+    float: left;
+}
+#sub{
+    margin:15px 0 10px ;
+    width: 70%;
+    height: 30px;
+    border: 0.5px solid var(--bl);
+    transition: .2s linear ;
+    border-radius: 20px;
+    
+}
+#sub:hover{
+    outline: none;
+    background-color: var(--org);
+    color: white;
+    cursor: pointer;
+    border-radius: 0px;
+}
+
+#n1{
+    margin:22px 0 0 10px;
+}
+#n2{
+    margin: 25px 0px 0 10px;
+}
+.login a{
+    margin: 7px 0 10px  ;
+    text-decoration: none;
+    color:var(--bl);
+    font-weight: 900;
+}
+
+.creat{
+    position: relative;
+}
+.creat button::after{
+    content: "";
+    margin: 15px 0 ;
+    position: absolute;
+    top: 0;
+    left: 25px;
+    width: 80%;
+    height: 2px;
+    background-color: var(--bl);
+}
+
+.creat button{
+    margin: 30px auto;
+    outline: none;
+    width: 70%;
+    height: 30px;
+    background-color: var(--bl);
+    color: white;
+    transition: 0.4s ease 0s;
+    cursor: pointer;
+}
+.creat button:hover{
+    background-color: var(--org);
+    border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
